@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+# Login management
+gem 'devise'
+
+# Image uploader
+gem 'carrierwave'
