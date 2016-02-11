@@ -9,3 +9,4 @@
 User.create(name: 'taiki', email: 'fantastic.ron@gmail.com', password: 'test')
 Board.create(name: 'Macbook', user: User.first)
 Message.create(content: '1ゲット', board: Board.first, user: User.first)
+Message.create(content: '2ゲット', board: Board.first, user: User.first)

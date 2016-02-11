@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20160205083720) do
     t.integer  "user_id"
     t.integer  "board_id"
     t.string   "name"
+    t.string   "content"
     t.string   "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

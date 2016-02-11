@@ -1,5 +1,3 @@
-p#notice = notice
-
 p
   strong User:
   = @board.user.name
@@ -7,13 +5,19 @@ p
 p
   strong Name:
   = @board.name
-
-tbody
+ul
   - @board.messages.each do |message|
-    tr
-      td = message.content
-      td = message.user.name
+    li
+      = message.content
+      = message.user.name
 
-  = link_to 'Edit', edit_board_path(@board)
+= form_for [@board, @message] do |f|
+  div.field
+    = f.label :content
+    = f.text_area :content
+  div.actions
+    = f.submit
+
+= link_to 'Edit', edit_board_path(@board)
 '|
 = link_to 'Back', boards_path
