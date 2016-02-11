@@ -50,3 +50,6 @@ gem 'devise'
 
 # Image uploader
 gem 'carrierwave'
+
+# Template engine
+gem 'slim-rails'

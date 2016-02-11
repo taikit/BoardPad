@@ -1,0 +1,19 @@
+p#notice = notice
+
+p
+  strong User:
+  = @board.user.name
+
+p
+  strong Name:
+  = @board.name
+
+tbody
+  - @board.messages.each do |message|
+    tr
+      td = message.content
+      td = message.user.name
+
+  = link_to 'Edit', edit_board_path(@board)
+'|
+= link_to 'Back', boards_path
