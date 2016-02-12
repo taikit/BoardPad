@@ -22,5 +22,11 @@ module BoardPad
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Setting landing layout for device
+    config.to_prepare do
+      Devise::RegistrationsController.layout proc { |controller| user_signed_in? ? 'application' : 'landing' }
+      Devise::SessionsController.layout 'landing'
+    end
   end
 end

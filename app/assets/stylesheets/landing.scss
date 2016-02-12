@@ -1,0 +1,25 @@
+.lp-body {
+  background: image-url('lp.jpg') no-repeat fixed center center;
+  background-size: cover;
+}
+
+.lp {
+  width: 100%;
+  display: table;
+  padding-top: 20%;
+
+  h1{
+    font-size: 300%;
+  }
+
+  section {
+    color: #ffffff;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center
+  }
+
+  .login {
+    padding-top: 10%;
+  }
+}

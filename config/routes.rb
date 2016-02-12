@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :boards do
-    resources :messages
+  resources :boards , :only => [:new, :create, :index, :show] do
+    resources :messages, :only => [:new, :create]
   end
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

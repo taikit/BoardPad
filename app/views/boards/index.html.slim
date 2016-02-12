@@ -1,0 +1,21 @@
+h1 Listing Boards
+
+table
+  thead
+    tr
+      th Owner
+      th Name
+      th colspan="3"
+  tbody
+    - @boards.each do |board|
+      tr
+        td = board.user.name
+        td =  board.name
+        td = link_to 'Show', board
+br
+
+= link_to 'Logout', destroy_user_session_path, method: :delete
+
+br
+
+= link_to 'New Board', new_board_path
